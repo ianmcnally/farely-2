@@ -1,0 +1,16 @@
+exports[`with required props renders the input 1`] = `
+<p>
+  <label
+    className="db fw6 lh-copy f5"
+    htmlFor="remaining-balance">
+    Remaining balance
+  </label>
+  <CurrencyInput
+    autoFocus={true}
+    className="pa2 w-100 input-reset ba measure b--black-20"
+    id="remaining-balance"
+    onChange={undefined}
+    type="number"
+    value={undefined} />
+</p>
+`;

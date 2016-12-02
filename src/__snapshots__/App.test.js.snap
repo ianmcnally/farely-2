@@ -1,0 +1,15 @@
+exports[`when it renders renders the App components 1`] = `
+<main
+  className="sans-serif mw5 center">
+  <RemainingBalance
+    onChange={[Function]}
+    value="" />
+  <MaximumSpend
+    onChange={[Function]}
+    value="40.00" />
+  <Unknown />
+  <Unknown
+    hide={false} />
+  <Unknown />
+</main>
+`;

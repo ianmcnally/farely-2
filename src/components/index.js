@@ -1,0 +1,5 @@
+export { default as Additions } from './additions/additions'
+export { default as Footer } from './footer/footer'
+export { default as Instructions } from './instructions/instructions'
+export { default as MaximumSpend } from './maximum-spend/maximum-spend'
+export { default as RemainingBalance } from './remaining-balance/remaining-balance'
