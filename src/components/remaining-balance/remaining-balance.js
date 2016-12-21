@@ -4,7 +4,7 @@ import CurrencyInput from 'react-currency-masked-input'
 const RemainingBalance = ({ onChange, value }) =>
   <p>
     <label className="db fw6 lh-copy f5" htmlFor="remaining-balance">
-      Remaining balance
+      Current balance
     </label>
     <CurrencyInput
       className="pa2 w-100 input-reset ba measure b--black-20"

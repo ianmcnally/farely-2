@@ -3,7 +3,7 @@ exports[`with required props renders the input 1`] = `
   <label
     className="db fw6 lh-copy f5"
     htmlFor="remaining-balance">
-    Remaining balance
+    Current balance
   </label>
   <CurrencyInput
     autoFocus={true}
