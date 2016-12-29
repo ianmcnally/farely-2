@@ -7,6 +7,7 @@
     "render-shallow": "^1.0.2"
   },
   "dependencies": {
+    "lodash.range": "^3.2.0",
     "normalize.css": "^5.0.0",
     "react": "^15.4.0",
     "react-currency-masked-input": "^1.0.2",
