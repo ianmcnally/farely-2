@@ -30,7 +30,7 @@ const isDollarAmountAMultipleOfFive = dollarAmount => ((dollarAmount * 100) % 5)
 
 const isValidAmountToAdd = value => isDollarAmountAMultipleOfFive(value)
 
-export const faresForEvenRidesWithinRange = (currentBalance = 0, maximumSpend = TRANSACTION_MAX) => {
+export const costForFaresInBudget = (currentBalance = 0, maximumSpend = TRANSACTION_MAX) => {
   const maximumAmountToSpend = (maximumSpend > TRANSACTION_MAX) ? TRANSACTION_MAX : maximumSpend
   const possibleFares = getPossibleFaresForSpendingRange(currentBalance, maximumAmountToSpend)
   const possibleCosts = getCostsForFares(currentBalance, possibleFares)
