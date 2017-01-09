@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "jasmine-expect-jsx": "^1.1.2",
     "lodash.last": "^3.0.0",
     "react-addons-test-utils": "^15.4.2",
     "react-scripts": "0.7.0",
