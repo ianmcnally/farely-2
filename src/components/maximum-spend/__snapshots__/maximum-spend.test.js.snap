@@ -1,3 +1,35 @@
+exports[`with props.onChange renders the input with an onChange 1`] = `
+<p>
+  <label
+    className="db fw6 lh-copy f5"
+    htmlFor="maximum-spend">
+    Max to spend
+  </label>
+  <CurrencyInput
+    className="pa2 w-100 input-reset ba measure b--black-20"
+    id="maximum-spend"
+    onChange={[Function]}
+    type="number"
+    value={undefined} />
+</p>
+`;
+
+exports[`with props.value renders the input with a value 1`] = `
+<p>
+  <label
+    className="db fw6 lh-copy f5"
+    htmlFor="maximum-spend">
+    Max to spend
+  </label>
+  <CurrencyInput
+    className="pa2 w-100 input-reset ba measure b--black-20"
+    id="maximum-spend"
+    onChange={undefined}
+    type="number"
+    value="hey" />
+</p>
+`;
+
 exports[`with required props renders the input 1`] = `
 <p>
   <label
