@@ -33,7 +33,10 @@ export default class App extends Component {
   };
 
   handleMaximumChange = (_e, value) => {
-    this.setState({ maximum: value })
+    this.setState(currentState => ({
+      maximum: value,
+      fares: costForFaresInBudget(currentState.remaining, value)
+    }))
   };
 
   render() {
