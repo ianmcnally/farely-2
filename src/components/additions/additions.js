@@ -7,7 +7,7 @@ const Additions = ({ fares = defaultFares  }) =>
   (fares.length) ?
   <ul>
   {fares.map(fare =>
-    <li>Add {fare.cost.toFixed(2)} for {fare.rides} rides</li>
+    <li key={fare.rides}>Add {fare.cost.toFixed(2)} for {fare.rides} rides</li>
   )}
   </ul>
   : null
