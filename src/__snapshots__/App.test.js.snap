@@ -7,7 +7,7 @@ exports[`when it renders renders the App components 1`] = `
   <MaximumSpend
     onChange={[Function]}
     value="40.00" />
-  <Unknown />
+  <Additions />
   <Unknown
     hide={false} />
   <Unknown />
