@@ -6,6 +6,7 @@ import {
   Instructions,
   Footer
 } from './components'
+import { costForFaresInBudget } from './services/fare-calculations'
 import 'normalize.css'
 import 'tachyons-borders/css/tachyons-borders.min.css'
 import 'tachyons-border-colors/css/tachyons-border-colors.min.css'
@@ -22,10 +23,13 @@ import 'tachyons-utilities/css/tachyons-utilities.min.css'
 import 'tachyons-widths/css/tachyons-widths.min.css'
 
 export default class App extends Component {
-  state = { remaining: '', maximum: '40.00' };
+  state = { fares: undefined, remaining: '', maximum: '40.00' };
 
   handleRemainingChange = (_e, value) => {
-    this.setState({ remaining: value })
+    this.setState(currentState => ({
+      remaining: value,
+      fares: costForFaresInBudget(value, currentState.maximum)
+    }))
   };
 
   handleMaximumChange = (_e, value) => {
@@ -33,7 +37,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { remaining, maximum } = this.state
+    const { fares, remaining, maximum } = this.state
     const { handleMaximumChange, handleRemainingChange } = this
     const hideInstructions = Boolean(remaining && maximum)
 
@@ -41,7 +45,7 @@ export default class App extends Component {
       <main className="sans-serif mw5 center">
         <RemainingBalance value={remaining} onChange={handleRemainingChange} />
         <MaximumSpend value={maximum} onChange={handleMaximumChange} />
-        <Additions />
+        <Additions fares={fares} />
         <Instructions hide={hideInstructions}/>
         <Footer />
       </main>
