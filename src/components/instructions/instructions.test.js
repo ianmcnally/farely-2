@@ -14,3 +14,17 @@ describe('with required props', () => {
   })
 
 })
+
+describe('with props.hide=true', () => {
+  const props = { hide: true }
+  let component
+
+  beforeAll(() => {
+    component = renderShallow(<Instructions {...props} />).output
+  })
+
+  it('renders with a hidden class', () => {
+    expect(component).toMatchSnapshot()
+  })
+})
+
