@@ -45,7 +45,7 @@ export default class App extends Component {
   render() {
     const { fares, remaining, maximum } = this.state
     const { handleMaximumChange, handleRemainingChange } = this
-    const hideInstructions = Boolean(remaining && maximum)
+    const hideInstructions = Boolean(fares)
 
     return (
       <main className="sans-serif mw5 center">
