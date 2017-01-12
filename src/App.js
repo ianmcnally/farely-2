@@ -25,12 +25,26 @@ import 'tachyons-lists/css/tachyons-lists.min.css'
 import 'tachyons-border-style/css/tachyons-border-style.min.css'
 import 'tachyons-border-widths/css/tachyons-border-widths.min.css'
 
+const defaultCurrentBalanceBeforeRender = '0.00'
+const defaultCurrentBalanceAfterRender = ''
+const defaultMaximumSpend = '40.00'
+const defaultFares = undefined
+
 export default class App extends Component {
-  state = { fares: undefined, remaining: '', maximum: '40.00' };
+
+  state = {
+    fares: costForFaresInBudget(defaultCurrentBalanceBeforeRender, defaultMaximumSpend),
+    currentBalance: defaultCurrentBalanceBeforeRender,
+    maximum: defaultMaximumSpend
+  };
+
+  componentDidMount() {
+    this.setState({ currentBalance: defaultCurrentBalanceAfterRender, fares: defaultFares })
+  }
 
   handleRemainingChange = (_e, value) => {
     this.setState(currentState => ({
-      remaining: value,
+      currentBalance: value,
       fares: costForFaresInBudget(value, currentState.maximum)
     }))
   };
@@ -38,18 +52,18 @@ export default class App extends Component {
   handleMaximumChange = (_e, value) => {
     this.setState(currentState => ({
       maximum: value,
-      fares: costForFaresInBudget(currentState.remaining, value)
+      fares: costForFaresInBudget(currentState.currentBalance, value)
     }))
   };
 
   render() {
-    const { fares, remaining, maximum } = this.state
+    const { fares, currentBalance, maximum } = this.state
     const { handleMaximumChange, handleRemainingChange } = this
     const hideInstructions = Boolean(fares)
 
     return (
       <main className="sans-serif mw5 center">
-        <RemainingBalance value={remaining} onChange={handleRemainingChange} />
+        <RemainingBalance value={currentBalance} onChange={handleRemainingChange} />
         <MaximumSpend value={maximum} onChange={handleMaximumChange} />
         <Additions fares={fares} />
         <Instructions hide={hideInstructions}/>

@@ -12,7 +12,24 @@ describe('when it renders', () => {
     component = renderShallow(<App />).output
   })
 
-  it('renders the App components', () => {
+  it('renders the App with a zero balance and its fares', () => {
+    expect(component).toMatchSnapshot()
+  })
+
+})
+
+describe('when it mounts', () => {
+  let component
+
+  beforeAll(() => {
+    const { instance, rerender } = renderShallow(<App />)
+
+    instance().componentDidMount()
+
+    component = rerender()
+  })
+
+  it('renders the App with no current balance and no fares', () => {
     expect(component).toMatchSnapshot()
   })
 

@@ -1,4 +1,4 @@
-exports[`when it renders renders the App components 1`] = `
+exports[`when it mounts renders the App with no current balance and no fares 1`] = `
 <main
   className="sans-serif mw5 center">
   <RemainingBalance
@@ -11,6 +11,42 @@ exports[`when it renders renders the App components 1`] = `
     fares={undefined} />
   <Instructions
     hide={false} />
+  <Footer />
+</main>
+`;
+
+exports[`when it renders renders the App with a zero balance and its fares 1`] = `
+<main
+  className="sans-serif mw5 center">
+  <RemainingBalance
+    onChange={[Function]}
+    value="0.00" />
+  <MaximumSpend
+    onChange={[Function]}
+    value="40.00" />
+  <Additions
+    fares={
+      Array [
+        Object {
+          "cost": 2.75,
+          "rides": 1,
+        },
+        Object {
+          "cost": 5.5,
+          "rides": 2,
+        },
+        Object {
+          "cost": 22.3,
+          "rides": 9,
+        },
+        Object {
+          "cost": 27.25,
+          "rides": 11,
+        },
+      ]
+    } />
+  <Instructions
+    hide={true} />
   <Footer />
 </main>
 `;
