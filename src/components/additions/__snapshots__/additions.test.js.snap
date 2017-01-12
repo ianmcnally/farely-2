@@ -1,1 +1,23 @@
+exports[`with props.fares renders the fares 1`] = `
+<ul
+  className="list pl0 measure center mt2 mb0">
+  <li
+    className="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-30">
+    Add 
+    1.50
+     for 
+    100
+     rides
+  </li>
+  <li
+    className="lh-copy pv2 ba bl-0 bt-0 br-0 b--dotted b--black-30 bb-0">
+    Add 
+    2.50
+     for 
+    200
+     rides
+  </li>
+</ul>
+`;
+
 exports[`with required props renders the component 1`] = `null`;

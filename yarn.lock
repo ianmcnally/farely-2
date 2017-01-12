@@ -5138,6 +5138,14 @@ tachyons-border-colors@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/tachyons-border-colors/-/tachyons-border-colors-4.2.3.tgz#d634d1f0a7f39a612f9b4f92053e98aa212f4bf6"
 
+tachyons-border-style:
+  version "4.0.4"
+  resolved "https://registry.yarnpkg.com/tachyons-border-style/-/tachyons-border-style-4.0.4.tgz#b629f8dcab31302ce3bb5f2019de5825412aea97"
+
+tachyons-border-widths:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/tachyons-border-widths/-/tachyons-border-widths-3.0.4.tgz#f4e2f33d102329b0c1427ec5af2ce6fe730ee79a"
+
 tachyons-borders@^3.0.3:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/tachyons-borders/-/tachyons-borders-3.0.4.tgz#4d52c19ad3bcb7817a5c1078a2eb9dfb0b3dc40f"
@@ -5161,6 +5169,10 @@ tachyons-forms@^3.1.2:
 tachyons-line-height@^3.0.5:
   version "3.0.6"
   resolved "https://registry.yarnpkg.com/tachyons-line-height/-/tachyons-line-height-3.0.6.tgz#e5b4e116f9aadec530438a62d3fd043c7785b300"
+
+tachyons-lists:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/tachyons-lists/-/tachyons-lists-2.0.12.tgz#a38f54517f5d7b3a5518b4671e2924df9d18b037"
 
 tachyons-max-widths@^4.0.3:
   version "4.0.4"

@@ -17,7 +17,10 @@ describe('with required props', () => {
 
 describe('with props.fares', () => {
   const props = {
-    fares: [{cost: 1.50, rides: 100 }]
+    fares: [
+      {cost: 1.50, rides: 100 },
+      {cost: 2.50, rides: 200 }
+    ]
   }
   let component
 
@@ -25,10 +28,8 @@ describe('with props.fares', () => {
     component = renderShallow(<Additions {...props} />).output
   })
 
-  it('renders the component', () => {
-    expect(component).toIncludeJSX(
-      'Add 1.50 for 100 rides'
-    )
+  it('renders the fares', () => {
+    expect(component).toMatchSnapshot()
   })
 
 })

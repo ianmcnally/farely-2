@@ -1,5 +1,6 @@
 exports[`with props.onChange renders the input with an onChange 1`] = `
-<p>
+<p
+  className="mb0">
   <label
     className="db fw6 lh-copy f5"
     htmlFor="maximum-spend">
@@ -15,7 +16,8 @@ exports[`with props.onChange renders the input with an onChange 1`] = `
 `;
 
 exports[`with props.value renders the input with a value 1`] = `
-<p>
+<p
+  className="mb0">
   <label
     className="db fw6 lh-copy f5"
     htmlFor="maximum-spend">
@@ -31,7 +33,8 @@ exports[`with props.value renders the input with a value 1`] = `
 `;
 
 exports[`with required props renders the input 1`] = `
-<p>
+<p
+  className="mb0">
   <label
     className="db fw6 lh-copy f5"
     htmlFor="maximum-spend">

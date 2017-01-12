@@ -21,6 +21,9 @@ import 'tachyons-type-scale/css/tachyons-type-scale.min.css'
 import 'tachyons-typography/css/tachyons-typography.min.css'
 import 'tachyons-utilities/css/tachyons-utilities.min.css'
 import 'tachyons-widths/css/tachyons-widths.min.css'
+import 'tachyons-lists/css/tachyons-lists.min.css'
+import 'tachyons-border-style/css/tachyons-border-style.min.css'
+import 'tachyons-border-widths/css/tachyons-border-widths.min.css'
 
 export default class App extends Component {
   state = { fares: undefined, remaining: '', maximum: '40.00' };
