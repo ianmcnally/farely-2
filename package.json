@@ -39,7 +39,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
-  },
-  "homepage": "http://ianmcnally.github.io/farely-2"
+    "deploy": "npm run build && npm run build:manifest && npm run deploy:github",
+    "deploy:github": "gh-pages -d build",
+    "build:manifest": "NODE_PATH=. node lib/cache-manifest.js"
+  }
 }

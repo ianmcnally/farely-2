@@ -12,6 +12,5 @@ Requires Node 6+ and yarn (`npm i -g yarn`)
 
 ### Deployment
 
-- `yarn run build`
 - `yarn run deploy`
 
