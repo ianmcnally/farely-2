@@ -32,16 +32,12 @@ exports[`when it renders renders the App with a zero balance and its fares 1`] =
           "rides": 1,
         },
         Object {
-          "cost": 5.5,
-          "rides": 2,
+          "cost": 32.35,
+          "rides": 6,
         },
         Object {
-          "cost": 22.3,
-          "rides": 9,
-        },
-        Object {
-          "cost": 27.25,
-          "rides": 11,
+          "cost": 37.75,
+          "rides": 7,
         },
       ]
     } />

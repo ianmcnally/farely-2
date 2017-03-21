@@ -20,10 +20,9 @@ describe('costForFaresInBudget', () => {
 
     it('returns costs from one ride to maximum spend', () => {
       expect(costs).toEqual([
-        { rides: 1, cost: 2.75 },
-        { rides: 2, cost: 5.50 },
-        { rides: 9, cost: 22.30 },
-        { rides: 11, cost: 27.25 }
+        {cost: 2.75, rides: 1},
+        {cost: 32.35, rides: 6},
+        {cost: 37.75, rides: 7}
       ])
     })
 
@@ -40,8 +39,7 @@ describe('costForFaresInBudget', () => {
 
     it('returns costs from the current balance', () => {
       expect(costs).toEqual([
-        { rides: 10, cost: 2.50 },
-        { rides: 11, cost: 5.25 }
+        { rides: 10, cost: 2.50 }
       ])
     })
 
