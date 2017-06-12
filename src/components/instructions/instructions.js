@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const getClassNamesForInstructions = shouldHideInstructions => {
   let classNames = 'f5 lh-copy measure-narrow'

@@ -1,12 +1,13 @@
-import React, { PropTypes } from 'react'
-import CurrencyInput from 'react-currency-masked-input'
+import React from 'react'
+import PropTypes from 'prop-types'
+import CurrencyMaskedInput from 'react-currency-masked-input'
 
 const RemainingBalance = ({ onChange, value }) =>
   <p>
     <label className="db fw6 lh-copy f5" htmlFor="remaining-balance">
       Current balance
     </label>
-    <CurrencyInput
+    <CurrencyMaskedInput
       className="pa2 w-100 input-reset ba measure b--black-20"
       id="remaining-balance"
       autoFocus

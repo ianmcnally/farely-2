@@ -3,19 +3,20 @@
   "version": "0.1.1",
   "private": true,
   "devDependencies": {
-    "gh-pages": "^0.12.0",
+    "gh-pages": "^1.0.0",
     "jasmine-expect-jsx": "^1.1.2",
     "lodash.last": "^3.0.0",
     "react-addons-test-utils": "^15.4.2",
-    "react-scripts": "0.7.0",
-    "react-shallow-testutils": "^2.0.0",
+    "react-scripts": "1.0.7",
+    "react-shallow-testutils": "^3.0.0",
     "render-shallow": "^1.0.2"
   },
   "dependencies": {
     "lodash.range": "^3.2.0",
-    "normalize.css": "^5.0.0",
+    "normalize.css": "^7.0.0",
+    "prop-types": "^15.5.10",
     "react": "^15.4.0",
-    "react-currency-masked-input": "^1.0.2",
+    "react-currency-masked-input": "^2.1.0",
     "react-dom": "^15.4.0",
     "tachyons-border-colors": "^4.2.3",
     "tachyons-border-style": "^4.0.4",
@@ -31,7 +32,7 @@
     "tachyons-spacing": "^6.0.3",
     "tachyons-type-scale": "^6.0.3",
     "tachyons-typography": "^3.0.3",
-    "tachyons-utilities": "^1.2.8",
+    "tachyons-utilities": "^2.0.0",
     "tachyons-widths": "^5.0.3"
   },
   "scripts": {

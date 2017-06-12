@@ -6,12 +6,12 @@ exports[`with props.onChange renders the input with an onChange 1`] = `
     htmlFor="maximum-spend">
     Max to spend
   </label>
-  <CurrencyInput
+  <CurrencyMaskedInput
     className="pa2 w-100 input-reset ba measure b--black-20"
     id="maximum-spend"
     onChange={[Function]}
     type="number"
-    value={undefined} />
+    value={null} />
 </p>
 `;
 
@@ -23,7 +23,7 @@ exports[`with props.value renders the input with a value 1`] = `
     htmlFor="maximum-spend">
     Max to spend
   </label>
-  <CurrencyInput
+  <CurrencyMaskedInput
     className="pa2 w-100 input-reset ba measure b--black-20"
     id="maximum-spend"
     onChange={undefined}
@@ -40,11 +40,11 @@ exports[`with required props renders the input 1`] = `
     htmlFor="maximum-spend">
     Max to spend
   </label>
-  <CurrencyInput
+  <CurrencyMaskedInput
     className="pa2 w-100 input-reset ba measure b--black-20"
     id="maximum-spend"
     onChange={undefined}
     type="number"
-    value={undefined} />
+    value={null} />
 </p>
 `;
