@@ -1,13 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`with props.hide=true renders with a hidden class 1`] = `
 <p
-  className="f5 lh-copy measure-narrow dn">
+  className="f5 lh-copy measure-narrow dn"
+>
   Enter your MetroCard’s current balance to calculate the amount to put on it for an exact number of rides.
 </p>
 `;
 
 exports[`with required props renders the correct instructions 1`] = `
 <p
-  className="f5 lh-copy measure-narrow">
+  className="f5 lh-copy measure-narrow"
+>
   Enter your MetroCard’s current balance to calculate the amount to put on it for an exact number of rides.
 </p>
 `;

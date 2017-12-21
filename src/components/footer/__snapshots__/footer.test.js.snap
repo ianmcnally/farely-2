@@ -1,10 +1,14 @@
-exports[`test renders the correct footer information 1`] = `
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the correct footer information 1`] = `
 <footer
-  className="f6 bt b--black-20">
+  className="f6 bt b--black-20"
+>
   <p>
     Say hello 
     <a
-      href="twitter.com/farelyapp">
+      href="twitter.com/farelyapp"
+    >
       @farelyapp
     </a>
   </p>

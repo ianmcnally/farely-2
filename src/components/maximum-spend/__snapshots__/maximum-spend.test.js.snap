@@ -1,50 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`with props.onChange renders the input with an onChange 1`] = `
 <p
-  className="mb0">
+  className="mb0"
+>
   <label
     className="db fw6 lh-copy f5"
-    htmlFor="maximum-spend">
+    htmlFor="maximum-spend"
+  >
     Max to spend
   </label>
-  <CurrencyMaskedInput
+  <CurrencyInput
     className="pa2 w-100 input-reset ba measure b--black-20"
     id="maximum-spend"
     onChange={[Function]}
     type="number"
-    value={null} />
+    value={undefined}
+  />
 </p>
 `;
 
 exports[`with props.value renders the input with a value 1`] = `
 <p
-  className="mb0">
+  className="mb0"
+>
   <label
     className="db fw6 lh-copy f5"
-    htmlFor="maximum-spend">
+    htmlFor="maximum-spend"
+  >
     Max to spend
   </label>
-  <CurrencyMaskedInput
+  <CurrencyInput
     className="pa2 w-100 input-reset ba measure b--black-20"
     id="maximum-spend"
     onChange={undefined}
     type="number"
-    value="hey" />
+    value="hey"
+  />
 </p>
 `;
 
 exports[`with required props renders the input 1`] = `
 <p
-  className="mb0">
+  className="mb0"
+>
   <label
     className="db fw6 lh-copy f5"
-    htmlFor="maximum-spend">
+    htmlFor="maximum-spend"
+  >
     Max to spend
   </label>
-  <CurrencyMaskedInput
+  <CurrencyInput
     className="pa2 w-100 input-reset ba measure b--black-20"
     id="maximum-spend"
     onChange={undefined}
     type="number"
-    value={null} />
+    value={undefined}
+  />
 </p>
 `;
