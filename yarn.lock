@@ -5674,9 +5674,9 @@ react-addons-test-utils@^15.6.2:
   version "15.6.2"
   resolved "https://schoology.jfrog.io/schoology/api/npm/npm/react-addons-test-utils/-/react-addons-test-utils-15.6.2.tgz#c12b6efdc2247c10da7b8770d185080a7b047156"
 
-react-currency-masked-input@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-currency-masked-input/-/react-currency-masked-input-2.1.0.tgz#76ae31f49837f0b720ea84d592af36fa575c93a1"
+react-currency-masked-input@^2.2.0:
+  version "2.2.0"
+  resolved "https://schoology.jfrog.io/schoology/api/npm/npm/react-currency-masked-input/-/react-currency-masked-input-2.2.0.tgz#787cd3669b1f4da24efa2a84a6f6de43febeaebc"
   dependencies:
     prop-types "^15.5.10"
     react "^15.4.1"
