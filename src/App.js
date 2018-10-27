@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
+import React, { useReducer } from 'react'
 import {
   RemainingBalance,
   MaximumSpend,
   Additions,
   Instructions,
-  Footer
+  Footer,
 } from './components'
 import { costForFaresInBudget } from './services/fare-calculations'
 import 'normalize.css'
@@ -25,51 +25,54 @@ import 'tachyons-lists/css/tachyons-lists.min.css'
 import 'tachyons-border-style/css/tachyons-border-style.min.css'
 import 'tachyons-border-widths/css/tachyons-border-widths.min.css'
 
-const defaultCurrentBalanceBeforeRender = '0.00'
-const defaultCurrentBalanceAfterRender = ''
-const defaultMaximumSpend = '40.00'
-const defaultFares = undefined
+export default function App() {
+  const [state, dispatch] = useBalancesReducer()
 
-export default class App extends Component {
+  const handleRemainingChange = (_e, value) =>
+    dispatch({ type: 'CURRENT_BALANCE', value })
 
-  state = {
-    fares: costForFaresInBudget(defaultCurrentBalanceBeforeRender, defaultMaximumSpend),
-    currentBalance: defaultCurrentBalanceBeforeRender,
-    maximum: defaultMaximumSpend
-  };
+  const handleMaximumChange = (_e, value) =>
+    dispatch({ type: 'MAXIMUM_VALUE', value })
 
-  componentDidMount() {
-    this.setState({ currentBalance: defaultCurrentBalanceAfterRender, fares: defaultFares })
-  }
+  const hideInstructions = Boolean(state.fares)
 
-  handleRemainingChange = (_e, value) => {
-    this.setState(currentState => ({
-      currentBalance: value,
-      fares: costForFaresInBudget(value, currentState.maximum)
-    }))
-  };
-
-  handleMaximumChange = (_e, value) => {
-    this.setState(currentState => ({
-      maximum: value,
-      fares: costForFaresInBudget(currentState.currentBalance, value)
-    }))
-  };
-
-  render() {
-    const { fares, currentBalance, maximum } = this.state
-    const { handleMaximumChange, handleRemainingChange } = this
-    const hideInstructions = Boolean(fares)
-
-    return (
-      <main className="sans-serif mw5 center">
-        <RemainingBalance value={currentBalance} onChange={handleRemainingChange} />
-        <MaximumSpend value={maximum} onChange={handleMaximumChange} />
-        <Additions fares={fares} />
-        <Instructions hide={hideInstructions}/>
-        <Footer />
-      </main>
-    )
-  }
+  return (
+    <main className="sans-serif mw5 center">
+      <RemainingBalance
+        value={state.currentBalance}
+        onChange={handleRemainingChange}
+      />
+      <MaximumSpend value={state.maximum} onChange={handleMaximumChange} />
+      <Additions fares={state.fares} />
+      <Instructions hide={hideInstructions} />
+      <Footer />
+    </main>
+  )
 }
 
+function useBalancesReducer() {
+  const initialState = {
+    currentBalance: '0.00',
+    maximum: '40.00',
+  }
+  const [state, dispatch] = useReducer((state, action) => {
+    switch (action.type) {
+      case 'CURRENT_BALANCE':
+        return {
+          ...state,
+          currentBalance: action.value,
+          fares: costForFaresInBudget(action.value, state.maximum),
+        }
+      case 'MAXIMUM_VALUE':
+        return {
+          ...state,
+          maximum: action.value,
+          fares: costForFaresInBudget(state.currentBalance, action.value),
+        }
+      default:
+        return state
+    }
+  }, initialState)
+
+  return [state, dispatch]
+}
