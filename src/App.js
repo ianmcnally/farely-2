@@ -1,4 +1,4 @@
-import React, { useMemo, useReducer } from 'react'
+import React, { useState } from 'react'
 import {
   RemainingBalance,
   MaximumSpend,
@@ -6,62 +6,29 @@ import {
   Instructions,
   Footer,
 } from './components'
-import { costForFaresInBudget } from './services/fare-calculations'
 import './components/styling'
 
 export default function App() {
-  const [state, dispatch] = useBalancesReducer()
+  const [balance, setBalance] = useState('0.00')
+  const [maximum, setMaximum] = useState('40.00')
+  const [showInstructions, setShowInstructions] = useState(true)
 
-  const handleRemainingChange = (_e, value) =>
-    dispatch({ type: 'CURRENT_BALANCE', value })
-
-  const handleMaximumChange = (_e, value) =>
-    dispatch({ type: 'MAXIMUM_VALUE', value })
-
-  const hideInstructions = Boolean(state.fares)
-
-  const additions = useMemo(() => <Additions fares={state.fares} />, [
-    state.currentBalance,
-    state.maximum,
-  ])
+  const handleBalanceChange = (_e, value) => setBalance(value)
+  const handleMaximumChange = (_e, value) => setMaximum(maximum)
+  const hideInstructionsAfterInteraction = () => setShowInstructions(false)
 
   return (
-    <main className="sans-serif mw5 center">
-      <RemainingBalance
-        value={state.currentBalance}
-        onChange={handleRemainingChange}
-      />
-      <MaximumSpend value={state.maximum} onChange={handleMaximumChange} />
-      {additions}
-      <Instructions hide={hideInstructions} />
+    <main
+      className="sans-serif mw5 center"
+      onChange={hideInstructionsAfterInteraction}>
+      <RemainingBalance value={balance} onChange={handleBalanceChange} />
+      <MaximumSpend value={maximum} onChange={handleMaximumChange} />
+      {showInstructions ? (
+        <Instructions />
+      ) : (
+        <Additions balance={balance} maximum={maximum} />
+      )}
       <Footer />
     </main>
   )
-}
-
-function useBalancesReducer() {
-  const initialState = {
-    currentBalance: '0.00',
-    maximum: '40.00',
-  }
-  const [state, dispatch] = useReducer((state, action) => {
-    switch (action.type) {
-      case 'CURRENT_BALANCE':
-        return {
-          ...state,
-          currentBalance: action.value,
-          fares: costForFaresInBudget(action.value, state.maximum),
-        }
-      case 'MAXIMUM_VALUE':
-        return {
-          ...state,
-          maximum: action.value,
-          fares: costForFaresInBudget(state.currentBalance, action.value),
-        }
-      default:
-        return state
-    }
-  }, initialState)
-
-  return [state, dispatch]
 }
