@@ -14,7 +14,7 @@ export default function App() {
   const [showInstructions, setShowInstructions] = useState(true)
 
   const handleBalanceChange = (_e, value) => setBalance(value)
-  const handleMaximumChange = (_e, value) => setMaximum(maximum)
+  const handleMaximumChange = (_e, value) => setMaximum(value)
   const hideInstructionsAfterInteraction = () => setShowInstructions(false)
 
   return (

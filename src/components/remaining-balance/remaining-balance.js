@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import CurrencyMaskedInput from 'react-currency-masked-input'
 
-const RemainingBalance = ({ onChange, value }) =>
+const RemainingBalance = React.memo(({ onChange, value }) =>
   <p>
     <label className="db fw6 lh-copy f5" htmlFor="remaining-balance">
       Current balance
@@ -16,6 +16,7 @@ const RemainingBalance = ({ onChange, value }) =>
       onChange={onChange}
     />
   </p>
+)
 
 RemainingBalance.propTypes = {
   value: PropTypes.string,
