@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useMemo, memo } from 'react'
 import * as AppPropTypes from '../../prop-types'
 import { costForFaresInBudget } from '../../services/fare-calculations'
 
@@ -11,8 +11,11 @@ const getClassNamesForFareItem = (fareIndex, amountOfFares) => {
 
 const getDisplayCost = actualCost => actualCost.toFixed(2)
 
-const Additions = ({ maximum, balance }) => {
-  const fares = costForFaresInBudget(balance, maximum)
+const Additions = memo(({ balance, maximum }) => {
+  const fares = useMemo(() => costForFaresInBudget(balance, maximum), [
+    balance,
+    maximum,
+  ])
 
   return fares ? (
     <ul className="list pl0 measure center mt2 mb0">
@@ -23,7 +26,7 @@ const Additions = ({ maximum, balance }) => {
       ))}
     </ul>
   ) : null
-}
+})
 
 Additions.propTypes = {
   fares: AppPropTypes.fares,
