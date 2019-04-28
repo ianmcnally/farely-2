@@ -14,8 +14,6 @@ const getPossibleFaresForSpendingRange = (currentBalance, maximumSpend) => {
   }))
 }
 
-const numberToTwoDecimalPlaces = number => Number(number.toFixed(2))
-
 const getCostsForFares = (currentBalance, fares) => fares.map(({ rides, fare }) => {
   const costOfFare = fare - currentBalance
   return { rides, cost: costOfFare }

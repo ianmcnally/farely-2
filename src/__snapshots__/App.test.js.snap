@@ -12,9 +12,7 @@ exports[`when it mounts renders the App with no current balance and no fares 1`]
     onChange={[Function]}
     value="40.00"
   />
-  <Additions
-    fares={undefined}
-  />
+  <Additions />
   <Instructions
     hide={false}
   />
