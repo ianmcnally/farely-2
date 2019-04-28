@@ -4,7 +4,7 @@ import {
   MaximumSpend,
   Additions,
   Instructions,
-  Footer
+  Footer,
 } from './components'
 import { costForFaresInBudget } from './services/fare-calculations'
 import 'normalize.css'
@@ -31,30 +31,35 @@ const defaultMaximumSpend = '40.00'
 const defaultFares = undefined
 
 export default class App extends Component {
-
   state = {
-    fares: costForFaresInBudget(defaultCurrentBalanceBeforeRender, defaultMaximumSpend),
+    fares: costForFaresInBudget(
+      defaultCurrentBalanceBeforeRender,
+      defaultMaximumSpend,
+    ),
     currentBalance: defaultCurrentBalanceBeforeRender,
-    maximum: defaultMaximumSpend
-  };
+    maximum: defaultMaximumSpend,
+  }
 
   componentDidMount() {
-    this.setState({ currentBalance: defaultCurrentBalanceAfterRender, fares: defaultFares })
+    this.setState({
+      currentBalance: defaultCurrentBalanceAfterRender,
+      fares: defaultFares,
+    })
   }
 
   handleRemainingChange = (_e, value) => {
     this.setState(currentState => ({
       currentBalance: value,
-      fares: costForFaresInBudget(value, currentState.maximum)
+      fares: costForFaresInBudget(value, currentState.maximum),
     }))
-  };
+  }
 
   handleMaximumChange = (_e, value) => {
     this.setState(currentState => ({
       maximum: value,
-      fares: costForFaresInBudget(currentState.currentBalance, value)
+      fares: costForFaresInBudget(currentState.currentBalance, value),
     }))
-  };
+  }
 
   render() {
     const { fares, currentBalance, maximum } = this.state
@@ -63,13 +68,15 @@ export default class App extends Component {
 
     return (
       <main className="sans-serif mw5 center">
-        <RemainingBalance value={currentBalance} onChange={handleRemainingChange} />
+        <RemainingBalance
+          value={currentBalance}
+          onChange={handleRemainingChange}
+        />
         <MaximumSpend value={maximum} onChange={handleMaximumChange} />
         <Additions fares={fares} />
-        <Instructions hide={hideInstructions}/>
+        <Instructions hide={hideInstructions} />
         <Footer />
       </main>
     )
   }
 }
-

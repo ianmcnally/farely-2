@@ -19,11 +19,7 @@ describe('costForFaresInBudget', () => {
     })
 
     it('returns costs from one ride to maximum spend', () => {
-      expect(costs).toEqual([
-        {cost: 2.75, rides: 1},
-        {cost: 32.35, rides: 6},
-        {cost: 37.75, rides: 7}
-      ])
+      expect(costs).toMatchSnapshot()
     })
 
   })
@@ -38,9 +34,7 @@ describe('costForFaresInBudget', () => {
     })
 
     it('returns costs from the current balance', () => {
-      expect(costs).toEqual([
-        { rides: 10, cost: 2.50 }
-      ])
+      expect(costs).toMatchSnapshot()
     })
 
   })

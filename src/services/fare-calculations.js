@@ -1,6 +1,4 @@
 import {
-  BONUS_MIN,
-  BONUS_PERCENT,
   TRANSACTION_MAX,
   RIDE_COST
 } from '../constants'
@@ -18,15 +16,9 @@ const getPossibleFaresForSpendingRange = (currentBalance, maximumSpend) => {
 
 const numberToTwoDecimalPlaces = number => Number(number.toFixed(2))
 
-const percentageToMultiplier = percentage => numberToTwoDecimalPlaces(percentage * .101)
-
-const getAmountMinusBonus = amount => numberToTwoDecimalPlaces(amount / percentageToMultiplier(BONUS_PERCENT))
-
 const getCostsForFares = (currentBalance, fares) => fares.map(({ rides, fare }) => {
   const costOfFare = fare - currentBalance
-  const costBeforeBonus = getAmountMinusBonus(costOfFare)
-  const amoundToAdd = (costBeforeBonus >= BONUS_MIN) ? costBeforeBonus : costOfFare
-  return { rides, cost: amoundToAdd }
+  return { rides, cost: costOfFare }
 })
 
 const isDollarAmountAMultipleOfFive = dollarAmount => ((dollarAmount * 100) % 5) === 0
