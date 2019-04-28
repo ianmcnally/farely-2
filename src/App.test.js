@@ -18,23 +18,6 @@ describe('when it renders', () => {
 
 })
 
-describe('when it mounts', () => {
-  let component
-
-  beforeAll(() => {
-    const { instance, rerender } = renderShallow(<App />)
-
-    instance().componentDidMount()
-
-    component = rerender()
-  })
-
-  it('renders the App with no current balance and no fares', () => {
-    expect(component).toMatchSnapshot()
-  })
-
-})
-
 describe('when the remaining balance changes', () => {
   const mockChangeEvent = {}
   const mockChangeValue = '1.00'

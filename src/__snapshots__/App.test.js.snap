@@ -1,25 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`when it mounts renders the App with no current balance and no fares 1`] = `
-<main
-  className="sans-serif mw5 center"
->
-  <RemainingBalance
-    onChange={[Function]}
-    value=""
-  />
-  <MaximumSpend
-    onChange={[Function]}
-    value="40.00"
-  />
-  <Additions />
-  <Instructions
-    hide={false}
-  />
-  <Footer />
-</main>
-`;
-
 exports[`when it renders renders the App with a zero balance and its fares 1`] = `
 <main
   className="sans-serif mw5 center"
