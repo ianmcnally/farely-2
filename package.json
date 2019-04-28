@@ -7,7 +7,7 @@
     "jasmine-expect-jsx": "^3.2.0",
     "lodash.last": "^3.0.0",
     "react-scripts": "^3.0.0",
-    "render-shallow": "^1.1.0"
+    "render-shallow": "^2.0.0"
   },
   "dependencies": {
     "lodash.range": "^3.2.0",
