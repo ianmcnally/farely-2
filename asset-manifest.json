@@ -1,6 +1,15 @@
 {
-  "main.css": "static/css/main.b643666a.css",
-  "main.css.map": "static/css/main.b643666a.css.map",
-  "main.js": "static/js/main.a93f9312.js",
-  "main.js.map": "static/js/main.a93f9312.js.map"
+  "files": {
+    "main.js": "/farely-2/static/js/main.7194adc3.chunk.js",
+    "main.js.map": "/farely-2/static/js/main.7194adc3.chunk.js.map",
+    "runtime~main.js": "/farely-2/static/js/runtime~main.b2dc5973.js",
+    "runtime~main.js.map": "/farely-2/static/js/runtime~main.b2dc5973.js.map",
+    "static/css/2.c60bfa77.chunk.css": "/farely-2/static/css/2.c60bfa77.chunk.css",
+    "static/js/2.c07a41ce.chunk.js": "/farely-2/static/js/2.c07a41ce.chunk.js",
+    "static/js/2.c07a41ce.chunk.js.map": "/farely-2/static/js/2.c07a41ce.chunk.js.map",
+    "index.html": "/farely-2/index.html",
+    "precache-manifest.4608c0dc56626f5e47b5369ad2a26d93.js": "/farely-2/precache-manifest.4608c0dc56626f5e47b5369ad2a26d93.js",
+    "service-worker.js": "/farely-2/service-worker.js",
+    "static/css/2.c60bfa77.chunk.css.map": "/farely-2/static/css/2.c60bfa77.chunk.css.map"
+  }
 }
