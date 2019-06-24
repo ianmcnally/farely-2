@@ -10,7 +10,6 @@
     "render-shallow": "^2.0.0"
   },
   "dependencies": {
-    "lodash.range": "^3.2.0",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.5.10",
     "react": "^16.2.0",
