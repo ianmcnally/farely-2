@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.0/workbox-sw.js");
 
 importScripts(
-  "/farely-2/precache-manifest.febe77360e6b439b37912ca1fd79f5df.js"
+  "/farely-2/precache-manifest.46035c0f9ed00ea08fcabdefbb7db09c.js"
 );
 
 self.addEventListener('message', (event) => {

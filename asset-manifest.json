@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/farely-2/static/js/main.6cec3d7f.chunk.js",
-    "main.js.map": "/farely-2/static/js/main.6cec3d7f.chunk.js.map",
+    "main.js": "/farely-2/static/js/main.8e5a20ea.chunk.js",
+    "main.js.map": "/farely-2/static/js/main.8e5a20ea.chunk.js.map",
     "runtime~main.js": "/farely-2/static/js/runtime~main.b2dc5973.js",
     "runtime~main.js.map": "/farely-2/static/js/runtime~main.b2dc5973.js.map",
     "static/css/2.e92a785f.chunk.css": "/farely-2/static/css/2.e92a785f.chunk.css",
-    "static/js/2.fd2b8fcf.chunk.js": "/farely-2/static/js/2.fd2b8fcf.chunk.js",
-    "static/js/2.fd2b8fcf.chunk.js.map": "/farely-2/static/js/2.fd2b8fcf.chunk.js.map",
+    "static/js/2.18c630c7.chunk.js": "/farely-2/static/js/2.18c630c7.chunk.js",
+    "static/js/2.18c630c7.chunk.js.map": "/farely-2/static/js/2.18c630c7.chunk.js.map",
     "index.html": "/farely-2/index.html",
-    "precache-manifest.febe77360e6b439b37912ca1fd79f5df.js": "/farely-2/precache-manifest.febe77360e6b439b37912ca1fd79f5df.js",
+    "precache-manifest.46035c0f9ed00ea08fcabdefbb7db09c.js": "/farely-2/precache-manifest.46035c0f9ed00ea08fcabdefbb7db09c.js",
     "service-worker.js": "/farely-2/service-worker.js",
     "static/css/2.e92a785f.chunk.css.map": "/farely-2/static/css/2.e92a785f.chunk.css.map"
   }
