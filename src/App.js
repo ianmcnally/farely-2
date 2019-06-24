@@ -12,6 +12,7 @@ import './styles'
 const defaultCurrentBalance = '0.00'
 const defaultMaximumSpend = '40.00'
 const initialState = {
+  interacted: false,
   fares: costForFaresInBudget(defaultCurrentBalance, defaultMaximumSpend),
   currentBalance: defaultCurrentBalance,
   maximum: defaultMaximumSpend,
@@ -24,12 +25,14 @@ function reducer(state, action) {
         ...state,
         currentBalance: action.value,
         fares: costForFaresInBudget(action.value, state.maximum),
+        interacted: true,
       }
     case 'maximum':
       return {
         ...state,
         maximum: action.value,
         fares: costForFaresInBudget(state.currentBalance, action.value),
+        interacted: true,
       }
     default:
       return state
@@ -38,8 +41,7 @@ function reducer(state, action) {
 
 export default function App() {
   const [state, dispatch] = React.useReducer(reducer, initialState)
-  const { fares, currentBalance, maximum } = state
-  const hideInstructions = Boolean(fares)
+  const { fares, currentBalance, maximum, interacted } = state
 
   function handleBalanceChange(event, value) {
     dispatch({ type: 'balance', value })
@@ -52,8 +54,11 @@ export default function App() {
     <main className="sans-serif mw5 center">
       <RemainingBalance value={currentBalance} onChange={handleBalanceChange} />
       <MaximumSpend value={maximum} onChange={handleMaximumChange} />
-      <Additions fares={fares} />
-      <Instructions hide={hideInstructions} />
+      {interacted ? (
+        <Additions fares={fares} />
+      ) : (
+        <Instructions />
+      )}
       <Footer />
     </main>
   )
